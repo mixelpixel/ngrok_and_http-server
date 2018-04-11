@@ -39,6 +39,7 @@
       drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
   ```
+4. While you are here, open a console and navigate to this projects directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. `q` will "quit" the display of the git commit history log and return you to your console.
 
 # Set up your project for deployment
 1. Make a project folder.
