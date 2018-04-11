@@ -123,7 +123,6 @@
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
   ```
-
 5. Look in the project_folder/node_modules folder. You will see that there is a folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` requires. Wasn't that nice of them? Don't modify these files, but do take a moment to examine them. There's useful information in the README files and otherwise just a bunch of JavaScript you didn't have to write. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. Lastly, your "package.json" file has been updated with:
   ```json
   "dependencies": {
