@@ -1,0 +1,9 @@
+{
+  "name": "DeploymentDemo",
+  "version": "1.0.0",
+  "description": "ngrok and http-server deployment demo",
+  "main": "project_folder/helloWorld.html",
+  "author": "Patrick Kennedy",
+  "license": "MIT",
+  "private": null
+}
