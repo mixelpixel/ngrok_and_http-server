@@ -224,6 +224,8 @@
 23. Share with your friends :)
 24. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
 25. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
+26. Add another header element to your HTML file and save the file.
+27. Did your web page update on the fly? How cool is that!!
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
