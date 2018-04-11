@@ -188,7 +188,7 @@
   ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
-17. use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port
+17. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
   $ npx http-server
       npx: installed 23 in 5.588s
@@ -199,7 +199,7 @@
         http://192.168.88.236:8080
       Hit CTRL-C to stop the server
   ```
-18. make note of the port number, and in another console, feed it to ngrok's http method:
+18. Make note of the port number, and in another console, feed it to ngrok's http method:
   ```console
   $ ngrok http 8080
   ```
