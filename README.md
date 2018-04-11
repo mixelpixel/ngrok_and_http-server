@@ -86,7 +86,7 @@
     }
     ```
 ## Instal NodeJS modules and dependencies
-4. Your NodeJS project will _depend_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
+4. Your NodeJS project will _**depend**_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
   ```console
   $ yarn add htpp-server
       yarn add v1.5.1
