@@ -14,9 +14,31 @@
 
 # What's going on here?
 ##### This Git repository comes with a README.md file, a .gitignore file and a .git project folder (which may be hidden from your view by your operating system).
-1. The README.md is written in "markdown" format. In particular, it is written with "GitHub Flavored Markdown" (GFM - and yes, there are lots of markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare this text to the display on GitHub. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
-2. The .gitignore file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders.
-3. The .git folder contains all the resources Git uses to track files, keep a history of your commits, and do all the things Git does. Don't modify these files, but do take a moment to look in there and examine the contents.
+1. The README.md is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - and yes, there are lots of markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare this text to the display on GitHub. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
+2. The .gitignore file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. For example, the list of items in this project does the following:
+  ```git
+  .DS_Store        <---- now these macOS system resource files will be ignored
+  node_modules     <---- the directory and it's contents will be ignored
+  *.sw[a-p]        <---- VIM text editing resources will be ignored
+  ```
+3. The .git folder contains all the resources Git uses to track files, keep a history of your commits, and do all the things Git does. Don't modify these files, but do take a moment to look in there and examine the contents:
+  ```console
+  $ ls -al .git
+      total 40
+      drwxr-xr-x  13 mixelpix  staff   416 Apr 11 14:14 .
+      drwxr-xr-x   7 mixelpix  staff   224 Apr 11 13:37 ..
+      -rw-r--r--   1 mixelpix  staff     5 Apr 11 14:14 COMMIT_EDITMSG
+      -rw-r--r--   1 mixelpix  staff    23 Apr 11 10:47 HEAD
+      drwxr-xr-x   2 mixelpix  staff    64 Apr 11 10:47 branches
+      -rw-r--r--@  1 mixelpix  staff   137 Apr 11 10:47 config
+      -rw-r--r--   1 mixelpix  staff    73 Apr 11 10:47 description
+      drwxr-xr-x  13 mixelpix  staff   416 Apr 11 10:47 hooks
+      -rw-r--r--   1 mixelpix  staff   536 Apr 11 14:14 index
+      drwxr-xr-x   3 mixelpix  staff    96 Apr 11 10:47 info
+      drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:49 logs
+      drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
+      drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
+  ```
 
 # Set up your project for deployment
 1. Make a project folder.
@@ -60,7 +82,7 @@
       "private": null,
     }
     ```
-4. Add the `http-server` module
+4. Add the `http-server` module. NOTE: sorry - Windows users don't get the icons :(
   ```console
   $ yarn add htpp-server
       yarn add v1.5.1
@@ -96,7 +118,7 @@
       ├─ url-join@2.0.5
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
-  ```
+    ```
 5. Look in the project_folder/node_modules folder. You will see that there is a folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` requires. Wasn't that nice of them? Don't modify these files, but do take a moment to examine them. There's useful information in the README files and otherwise just a bunch of JavaScript you didn't have to write. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. Lastly, your "package.json" file has been updated with:
   ```json
   "dependencies": {
