@@ -85,7 +85,7 @@
       "private": null,
     }
     ```
-## Instal NodeJS modules and dependencies
+## Instal NodeJS modules and dependencies, yarn.lock and package.json.
 4. Your NodeJS project will _**depend**_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
   ```console
   $ yarn add htpp-server
@@ -123,18 +123,20 @@
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
   ```
-5. Look in the project_folder/node_modules folder. You will see that there is a folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` requires. Wasn't that nice of them? Don't modify these files, but do take a moment to examine them. There's useful information in the README files and otherwise just a bunch of JavaScript you didn't have to write. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. Lastly, your "package.json" file has been updated with:
+5. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write.
+6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon.
+7. Lastly, your "package.json" file has been updated with:
   ```json
   "dependencies": {
     "http-server": "^0.11.1"
   }
   ```
 ## Installing ngrok
-6. Install the `ngrok` tool from https://ngrok.com/download
-7. This will download the _binary_, _executable_ program file. The download will deliver a compressed ".zip" file
-8. Decompress (or "expand") the .zip file.
-9. Windows users, take the `"ngrok" file out of the .zip file.
-10. You can run the command in your console directly from the directory location of the "ngrok" file, e.g. `$ cd path/to/the/ngrok/file`, i.e.:
+8. Install the `ngrok` tool from https://ngrok.com/download
+9. This will download the _binary_, _executable_ program file. The download will deliver a compressed ".zip" file
+10. Decompress (or "expand") the .zip file.
+11. Windows users, take the `"ngrok" file out of the .zip file.
+12. You can run the command in your console directly from the directory location of the "ngrok" file, e.g. `$ cd path/to/the/ngrok/file`, i.e.:
   ```console
   $ cd ~/Downloads
   $ ls -l ngrok
@@ -142,25 +144,25 @@
   $ ./ngrok help
   ```
   - NOTE: the x's on the left indicates this is an executable file.
-11. **macOS and linux users**, you can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
+13. **macOS and linux users**, you can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
   ```console
   $ env | grep "PATH"
       PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
   ```
   - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
   - Add the "ngrok" binary file to one of these directories.
-12. **Windows** users, with **GitBash**, you can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
+14. **Windows** users, with **GitBash**, you can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
   ```gitbash
   $ env | grep "\bPATH"
       PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
       PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
   ```
-13. macOS, linux and GitBash users can now verify the installation of the ngrok progam like so:
+15. macOS, linux and GitBash users can now verify the installation of the ngrok progam like so:
   ```console
   $ ngrok --version
       ngrok version 2.2.8
   ```
-14. **Windows** user, with **CMD** or **Powershell** you'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
+16. **Windows** user, with **CMD** or **Powershell** you'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
   - Click on the Window icon (lower left).
   - Type "sdvanced system settings".
   - Click the "View Advanced System Settings" Control Panel icon.
