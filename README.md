@@ -73,7 +73,7 @@
       success Saved package.json
       ✨  Done in 89.54s.
   ```
-  - You now have a "package.json" file. This file let's tools like `npm` or `yarn` keep track of the dependencies ("libraries," "modules") your project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
+  - You now have a "package.json" file. This file let's tools like `yarn` (or `npm` or `bower`) keep track of the dependencies ("libraries," "modules") your NodeJS project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
     ```json
     {
       "name": "DeploymentDemo",
