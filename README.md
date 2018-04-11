@@ -10,7 +10,7 @@
 9. PATH
 10. Global Regular Expression Print
 
-# Deploy with `ngrok` and NodeJS `http-server`
+# Set up your project for deployment
 1. Make a project folder.
 2. Inside your project folder, write an .html file which displays a "Hello world!" message, e.g.
   ```html
@@ -115,6 +115,8 @@
   - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
   - Add the "ngrok" binary file to one of these directories.
 12. Windows users,
+
+# Deploy with `ngrok` and NodeJS `http-server`
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
