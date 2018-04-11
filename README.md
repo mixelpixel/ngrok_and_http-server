@@ -137,14 +137,18 @@
   $ ./ngrok help
   ```
   - NOTE: the x's on the left indicates this is an executable file.
-11. macOS and linux users, you can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see somthing like this:
+11. **macOS and linux users**, you can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see somthing like this:
   ```console
   $ env | grep "PATH"
       PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
   ```
   - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
   - Add the "ngrok" binary file to one of these directories.
-12. Windows users,
+12. **Windows** users, with GitBash, you can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see somthing like this:
+  ```gitbash
+  $ env | grep "\bPATH"
+  
+  ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
 
