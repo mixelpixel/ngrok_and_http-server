@@ -42,6 +42,7 @@
 4. While you are here, open a console and navigate to this projects directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. `q` will "quit" the display of the git commit history log and return you to your console.
 
 # Set up your project for deployment
+## Project folder and an HTML file
 1. Make a project folder.
 2. Inside your project folder, write an .html file which displays a "Hello world!" message, e.g.
   ```html
@@ -56,6 +57,7 @@
     </body>
   </html>
   ```
+## Initializing a NodeJS project
 3. Inside your project folder, initialize a Node project with the Yarn initialization command:
   ```console
   $ yarn init
@@ -83,7 +85,8 @@
       "private": null,
     }
     ```
-4. Add the `http-server` module. NOTE: sorry - Windows users don't get the icons :(
+## Instal NodeJS modules and dependencies
+4. Your NodeJS project will _depend_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
   ```console
   $ yarn add htpp-server
       yarn add v1.5.1
@@ -126,6 +129,7 @@
     "http-server": "^0.11.1"
   }
   ```
+## Installing ngrok
 6. Install the `ngrok` tool from https://ngrok.com/download
 7. This will download the _binary_, _executable_ program file. The download will deliver a compressed ".zip" file
 8. Decompress (or "expand") the .zip file.
