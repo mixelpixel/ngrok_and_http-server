@@ -1,3 +1,15 @@
+# Show the world your work!
+##### Topics:
+1. Git ignore file
+3. Initializing NodeJS proects with Yarn
+4. Adding modules with `yarn add`
+5. Dependency management with package.json file
+6. lock file
+7. NodeJS modules
+8. Ngrok
+9. PATH
+10. Global Regular Expression Print
+
 # Deploy with `ngrok` and NodeJS `http-server`
 1. Make a project folder.
 2. Inside your project folder, write an .html file which displays a "Hello world!" message, e.g.
