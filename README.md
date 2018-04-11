@@ -11,6 +11,7 @@
 9. Ngrok
 10. Accessing binary executables through your environment's PATH
 11. Global Regular Expression Print
+12. `npx`
 
 # What's going on here?
 #### This Git repository comes with a README.md file, a .gitignore file and a .git project folder. Files and directories whose names begin with a period `.` may be hidden from your view by your operating system.
@@ -186,6 +187,40 @@
   ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
+17. use the `npx` command to serve up the project on a local port
+  ```console
+  $ npx http-server
+      npx: installed 23 in 5.588s
+      Starting up http-server, serving ./
+      Available on:
+        http://127.0.0.1:8080
+
+        http://192.168.88.236:8080
+      Hit CTRL-C to stop the server
+  ```
+18. make note of the port number, and in another console, feed it to ngrok's http method:
+  ```console
+  $ ngrok http 8080
+  ```
+19. You should see something like this:
+  ```console
+  ngrok by @inconshreveable                               (Ctrl+C to quit)
+
+  Session Status                online
+  Session Expires               7 hours, 57 minutes
+  Version                       2.2.8
+  Region                        United States (us)
+  Web Interface                 http://127.0.0.1:4040
+  Forwarding                    http://202c6e30.ngrok.io -> localhost:8080
+  Forwarding                    https://202c6e30.ngrok.io -> localhost:8080
+
+  Connections                   ttl     opn     rt1     rt5     p50     p90
+                                0       0       0.00    0.00    0.00    0.00
+  ```
+20. Congratulations, you are serving up your HTML file to the world!
+21. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
+22. Paste the URL into your browser to see how it looks from the world wide web.
+23. Share with your friends :)
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
