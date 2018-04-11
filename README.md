@@ -28,4 +28,4 @@
       success Saved package.json
       ✨  Done in 89.54s.
   ```
-4.
+4. Add the `http-server` module
