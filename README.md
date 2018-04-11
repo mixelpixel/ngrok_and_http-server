@@ -1,15 +1,20 @@
 # Show the world your work!
 ##### Topics:
-1. HTML
+1. Git repository
 2. Git ignore file
-3. Initializing NodeJS proects with Yarn
-4. Adding modules with `yarn add`
-5. Dependency management with package.json file
-6. lock file
-7. NodeJS modules
-8. Ngrok
-9. PATH
-10. Global Regular Expression Print
+3. GitHub Flavored Markdown
+4. HTML
+5. Initializing NodeJS projects with Yarn
+6. Adding NodeJS modules with `yarn add`
+7. Dependency management with a "package.json" file
+8. Dependency and version locking with a ".lock" file
+9. Ngrok
+10. Accessing binary executables through your environments PATH
+11. Global Regular Expression Print
+
+# What's going on here?
+1. This Git repository comes with a README.md file, a .gitignore file and a .git folder (which may be hidden from your view by your operating system). The .gitignore file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders.
+2. The README.md is written in "markdown" format. In particular, it is written with "GitHub Flavored Markdown" (GFM - and yes, there are lots of markdown flavors). The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" option
 
 # Set up your project for deployment
 1. Make a project folder.
