@@ -5,5 +5,8 @@
   "main": "project_folder/helloWorld.html",
   "author": "Patrick Kennedy",
   "license": "MIT",
-  "private": null
+  "private": null,
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
 }
