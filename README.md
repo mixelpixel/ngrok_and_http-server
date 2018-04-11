@@ -9,19 +9,19 @@
 7. Dependency management with a "package.json" file
 8. Dependency and version locking with a ".lock" file
 9. Ngrok
-10. Accessing binary executables through your environments PATH
+10. Accessing binary executables through your environment's PATH
 11. Global Regular Expression Print
 
 # What's going on here?
-#### This Git repository comes with a README.md file, a .gitignore file and a .git project folder (which may be hidden from your view by your operating system).
-1. The README.md is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - and yes, there are lots of markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare this text to the display on GitHub. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
-2. The .gitignore file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. For example, the list of items in this project does the following:
+#### This Git repository comes with a README.md file, a .gitignore file and a .git project folder. Files and directories whose names begin with a period `.` may be hidden from your view by your operating system.
+1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - and yes, there are lots of markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare this text to the display on GitHub. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
+2. The **.gitignore** file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. For example, the list of items in this project does the following:
   ```git
   .DS_Store        <---- now these macOS system resource files will be ignored
   node_modules     <---- the directory and it's contents will be ignored
   *.sw[a-p]        <---- VIM text editing resources will be ignored
   ```
-3. The .git folder contains all the resources Git uses to track files, keep a history of your commits, and do all the things Git does. Don't modify these files, but do take a moment to look in there and examine the contents:
+3. The **.git** folder contains all the resources Git uses to track files, keep a history of your commits, and do all the things Git does. Don't modify these files, but do take a moment to look in there and examine the contents:
   ```console
   $ ls -al .git
       total 40
