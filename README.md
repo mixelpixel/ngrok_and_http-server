@@ -29,3 +29,7 @@
       ✨  Done in 89.54s.
   ```
 4. Add the `http-server` module
+  ```console
+  $ yarn add htpp-server
+  ```
+5.
