@@ -28,6 +28,18 @@
       success Saved package.json
       ✨  Done in 89.54s.
   ```
+  - You now have a "package.json" file. This file let's tools like `npm` or `yarn` keep track of the dependencies ("libraries," "modules") your project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
+    ```json
+    {
+      "name": "DeploymentDemo",
+      "version": "1.0.0",
+      "description": "ngrok and http-server deployment demo",
+      "main": "project_folder/helloWorld.html",
+      "author": "Patrick Kennedy",
+      "license": "MIT",
+      "private": null,
+    }
+    ```
 4. Add the `http-server` module
   ```console
   $ yarn add htpp-server
