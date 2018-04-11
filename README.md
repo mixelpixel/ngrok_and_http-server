@@ -103,3 +103,17 @@
   - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
   - Add the "ngrok" binary file to one of these directories.
 12. Windows users,
+
+#### Other Deployment Options
+- Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
+- GitHub Pages: https://pages.github.com/
+- GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
+- Heroku: https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
+  - https://devcenter.heroku.com/articles/mongolab
+  - https://forum.freecodecamp.org/t/guide-for-using-mongodb-and-deploying-to-heroku/19347
+- MLab (for MongoDB hosting): https://mlab.com/signup/?gclid=EAIaIQobChMIrLP4p4Kc2gIVlLjACh0cFgTiEAAYASABEgJyJ_D_BwE
+  - MongoDB Atlas: https://www.mongodb.com/cloud/atlas/lp/general
+- Digital Ocean: https://www.digitalocean.com/
+- Microsoft Azure: https://azure.microsoft.com/en-us/free/search/
+- AWS free tier: https://aws.amazon.com/free/
+- Google Cloud free tier: https://cloud.google.com/free/
