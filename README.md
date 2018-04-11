@@ -1,6 +1,7 @@
 # Show the world your work!
 ##### Topics:
-1. Git ignore file
+1. HTML
+2. Git ignore file
 3. Initializing NodeJS proects with Yarn
 4. Adding modules with `yarn add`
 5. Dependency management with package.json file
