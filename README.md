@@ -12,6 +12,7 @@
 10. Accessing binary executables through your environment's PATH
 11. Global Regular Expression Print
 12. `npx`
+13. URL
 
 # What's going on here?
 #### This Git repository comes with a README.md file, a .gitignore file and a .git project folder. Files and directories whose names begin with a period `.` may be hidden from your view by your operating system.
@@ -187,7 +188,7 @@
   ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
-17. use the `npx` command to serve up the project on a local port
+17. use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port
   ```console
   $ npx http-server
       npx: installed 23 in 5.588s
@@ -221,6 +222,8 @@
 21. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
 22. Paste the URL into your browser to see how it looks from the world wide web.
 23. Share with your friends :)
+24. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
+25. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
