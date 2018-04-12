@@ -274,7 +274,7 @@ $ env | grep "\bPATH"
         http://192.168.88.236:8080
       Hit CTRL-C to stop the server
   ```
-26. Make note of the port number, and in another console, feed the port number to ngrok's http method:
+26. Make note of the port number. In another console, feed the port number to ngrok's http method:
   ```console
   $ ngrok http 8080
   ```
@@ -317,5 +317,17 @@ $ env | grep "\bPATH"
 - Microsoft Azure: https://azure.microsoft.com/en-us/free/search/
 - AWS free tier: https://aws.amazon.com/free/
 - Google Cloud free tier: https://cloud.google.com/free/
+- Python
+  - From the command line, `cd` to the directory containing your HTML files and run:
+  ```console
+  $ python -m SimpleHTTPServer
+      Serving HTTP on 0.0.0.0 port 8000 ...
+  ```
+  - For python3
+  ```console
+  $ python3 -m http.server
+      Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+  ```
+  - Then, in another console, run ngrok with the port number python serves up.
 
 <p align="right"><a href="#index">Index</a></p>
