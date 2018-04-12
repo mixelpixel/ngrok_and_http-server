@@ -76,21 +76,22 @@
       success Saved package.json
       ✨  Done in 89.54s.
   ```
-  - You now have a "package.json" file. This file let's tools like `yarn` (or `npm` or `bower`) manage the dependencies ("libraries," "modules") your NodeJS project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their own development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
-    ```js
-    {
-      "name": "DeploymentDemo",
-      "version": "1.0.0",
-      "description": "ngrok and http-server deployment demo",
-      "main": "project_folder/helloWorld.html",
-      "repository": "https://github.com/mixelpixel/ngrok_and_http-server.git",
-      "author": "Patrick Kennedy",
-      "license": "MIT",
-      "private": false,
-    }
-    ```
-## Instal NodeJS modules and dependencies for `http-server`
-4. Your NodeJS project will _**depend**_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
+## package.json
+4. Having used Yarn to initialize a NodeJS project, you now have a "package.json" file. Right now, it just contains the information you supplied from the initialization questionnaire. The package.json file can do a lot more, but for this exercise, we'll just be using it to make note of the `http-server` pakage we'll add shortly. In a NodeJS project, the package.json file let's tools like `yarn` and `npm` manage the dependencies ("libraries," "modules") your NodeJS project requires. Also, the package.json file let's developers share their projects with other developers. We can use this file to install the dependencies which fit our own particular development environment. Lastly, the ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
+  ```js
+  {
+    "name": "DeploymentDemo",
+    "version": "1.0.0",
+    "description": "ngrok and http-server deployment demo",
+    "main": "project_folder/helloWorld.html",
+    "repository": "https://github.com/mixelpixel/ngrok_and_http-server.git",
+    "author": "Patrick Kennedy",
+    "license": "MIT",
+    "private": false,
+  }
+  ```
+## Install NodeJS modules and dependencies for `http-server`
+4. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
   $ yarn add htpp-server
       yarn add v1.5.1
@@ -127,6 +128,7 @@
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
   ```
+  - NOTE: sorry Windows users, you don't get the icons :(
 5. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write.
 ## The .lock file
 6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
