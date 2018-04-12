@@ -16,15 +16,15 @@
 14. HTTP
 
 # What's going on here?
-### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period `.` may be hidden from your view by your operating system. Here's how to see them in [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
-1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - and yes, there are lots of markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare this text to the display on GitHub. GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
-2. The **.gitignore** file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. For example, the list of items in this project does the following:
+### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period may be hidden from your view by your operating system. Here's how to see them in [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
+1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - one of many markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare the text in the README>md file to the display of it on GitHub. Pretty neat, huh? GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
+2. The **.gitignore** file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. As an example, the list of items in this .gitignore file has the following effect:
   ```git
   .DS_Store        <---- now these macOS system resource files will be ignored
   node_modules     <---- the directory and it's contents will be ignored
   *.sw[a-p]        <---- VIM text editing resources will be ignored
   ```
-3. The **.git** folder contains all the resources Git uses to track files, keep a history of your commits, and do all the things Git does. Don't modify these files, but do take a moment to look in there and examine the contents:
+3. The **.git** folder contains all the resources Git uses to track file changes, e.g. maintaining the history of your commits. Don't modify these files, but do take a moment to look in there and examine the contents:
   ```console
   $ ls -al .git
       total 40
@@ -42,12 +42,12 @@
       drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
   ```
-4. While you are here, open a console and navigate to this projects directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. `q` will "quit" the display of the git commit history log and return you to your console.
+4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 
 # Set up your project for deployment
 ## Project folder and an HTML file
 1. Make a project folder.
-2. Inside your project folder, write an .html file which displays a "Hello world!" message, e.g.
+2. Inside of your project folder, write an .html file which displays a "Hello world!" message, e.g.
   ```html
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -61,7 +61,7 @@
   </html>
   ```
 ## Initializing a NodeJS project
-3. Inside your project folder, initialize a NodeJS project with the Yarn initialization command:
+3. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
   ```console
   $ yarn init
       yarn init v1.5.1
@@ -69,26 +69,27 @@
       question version (1.0.0): 1.0.0
       question description: ngrok and http-server deployment demo
       question entry point (index.js): project_folder/helloWorld.html
-      question repository url:
+      question repository url: https://github.com/mixelpixel/ngrok_and_http-server.git
       question author: Patrick Kennedy
       question license (MIT): MIT
-      question private: nope
+      question private: no
       success Saved package.json
       ✨  Done in 89.54s.
   ```
-  - You now have a "package.json" file. This file let's tools like `yarn` (or `npm` or `bower`) keep track of the dependencies ("libraries," "modules") your NodeJS project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
+  - You now have a "package.json" file. This file let's tools like `yarn` (or `npm` or `bower`) manage the dependencies ("libraries," "modules") your NodeJS project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their own development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
     ```json
     {
       "name": "DeploymentDemo",
       "version": "1.0.0",
       "description": "ngrok and http-server deployment demo",
       "main": "project_folder/helloWorld.html",
+      "repository": "https://github.com/mixelpixel/ngrok_and_http-server.git",
       "author": "Patrick Kennedy",
       "license": "MIT",
-      "private": null,
+      "private": false,
     }
     ```
-## Instal NodeJS modules and dependencies, yarn.lock and package.json.
+## Instal NodeJS modules and dependencies for `http-server`
 4. Your NodeJS project will _**depend**_ upon it, so add the `http-server` module. NOTE: sorry Windows users, you don't get the icons :(
   ```console
   $ yarn add htpp-server
@@ -127,7 +128,23 @@
       ✨  Done in 2.07s.
   ```
 5. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write.
-6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon.
+## The .lock file
+6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
+  ```json
+  http-server@^0.11.1:
+    version "0.11.1"
+    resolved "https://registry.yarnpkg.com/http-server/-/http-server-0.11.1.tgz#2302a56a6ffef7f9abea0147d838a5e9b6b6a79b"
+    dependencies:
+      colors "1.0.3"
+      corser "~2.0.0"
+      ecstatic "^3.0.0"
+      http-proxy "^1.8.1"
+      opener "~1.4.0"
+      optimist "0.6.x"
+      portfinder "^1.0.13"
+      union "~0.4.3"
+  ```
+## The package file
 7. Lastly, your "package.json" file has been updated with:
   ```json
   "dependencies": {
@@ -178,12 +195,12 @@
   - NOTE: GitBash displays Windows directory paths differently than Windows. For example, in GitBash /c/Users/mixel/bin/ is the equivalent of C:\Users\mixel\bin\ in Windows. In the Advanced System Settings dialogue, to add a new path, use the Windows syntax.
   - Now that the ngrok file can be found through your PATH, the ngrok command is available to CMD and Powershell.
   - CMD:
-  ```cmd
+  ```dosbatch
   C:\Users\mixel>ngrok --version
       ngrok version 2.2.8
   ```
   - Powershell:
-  ```ps
+  ```posh
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
   ```
