@@ -50,7 +50,7 @@
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 
-<p align="right"> [Index](#index) </p>
+<p align="right"> [Index](#index) <p>
 
 # Set up your project for deployment
 ## Project folder and an HTML file
@@ -99,7 +99,7 @@
   }
   ```
 
-<p align="right">[Index](#index)</p>
+<p align="right">[Index](#index)<p>
 
 # Install NodeJS modules and dependencies for `http-server`
 9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
@@ -165,7 +165,7 @@
   }
   ```
 
-<p align="right">[Index](#index)</p>
+<p align="right">[Index](#index)<p>
 
 # Installing [ngrok](https://ngrok.com)
 13. Download the `ngrok` tool from https://ngrok.com/download
@@ -248,7 +248,7 @@ $ env | grep "\bPATH"
       ngrok version 2.2.8
   ```
 
-<p align="right">[Index](#index)</p>
+<p align="right">[Index](#index)<p>
 
 # Deploy with `http-server` and `ngrok`
 25. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
@@ -290,7 +290,7 @@ $ env | grep "\bPATH"
 34. Add another header element to your HTML file and save the file.
 35. Did your web page update on the fly? How cool is that!!
 
-<p align="right">[Index](#index)</p>
+<p align="right">[Index](#index)<p>
 
 # Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
@@ -306,4 +306,4 @@ $ env | grep "\bPATH"
 - AWS free tier: https://aws.amazon.com/free/
 - Google Cloud free tier: https://cloud.google.com/free/
 
-<p align="right">[Index](#index)</p>
+<p align="right">[Index](#index)<p>
