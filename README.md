@@ -13,6 +13,7 @@
 11. Global Regular Expression Print
 12. `npx`
 13. URL
+14. HTTP
 
 # What's going on here?
 #### This Git repository comes with a README.md file, a .gitignore file and a .git project folder. Files and directories whose names begin with a period `.` may be hidden from your view by your operating system.
