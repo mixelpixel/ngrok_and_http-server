@@ -263,7 +263,7 @@ $ env | grep "\bPATH"
 <p align="right"><a href="#index">Index</a></p>
 
 # Deploy with `http-server` and `ngrok`
-25. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
+25. Use the `npx` command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
   $ npx http-server
       npx: installed 23 in 5.588s
