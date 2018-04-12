@@ -62,7 +62,7 @@
   ```
 ## Initializing a NodeJS project
 3. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
-  ```console
+  ```bash
   $ yarn init
       yarn init v1.5.1
       question name (project_folder): DeploymentDemo
