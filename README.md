@@ -308,12 +308,12 @@ $ env | grep "\bPATH"
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
 - GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
+- Digital Ocean: https://www.digitalocean.com/
 - Heroku: https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
   - https://devcenter.heroku.com/articles/mongolab
   - https://forum.freecodecamp.org/t/guide-for-using-mongodb-and-deploying-to-heroku/19347
 - MLab (for MongoDB hosting): https://mlab.com/signup/?gclid=EAIaIQobChMIrLP4p4Kc2gIVlLjACh0cFgTiEAAYASABEgJyJ_D_BwE
   - MongoDB Atlas: https://www.mongodb.com/cloud/atlas/lp/general
-- Digital Ocean: https://www.digitalocean.com/
 - Microsoft Azure: https://azure.microsoft.com/en-us/free/search/
 - AWS free tier: https://aws.amazon.com/free/
 - Google Cloud free tier: https://cloud.google.com/free/
