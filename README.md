@@ -78,7 +78,7 @@
   ```
 ## package.json
 4. Having used Yarn to initialize a NodeJS project, you now have a "package.json" file. Right now, it just contains the information you supplied from the initialization questionnaire. The package.json file can do a lot more, but for this exercise, we'll just be using it to make note of the `http-server` pakage we'll add shortly. In a NodeJS project, the package.json file let's tools like `yarn` and `npm` manage the dependencies ("libraries," "modules") your NodeJS project requires. Also, the package.json file let's developers share their projects with other developers. We can use this file to install the dependencies which fit our own particular development environment. Lastly, the ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
-  ```js
+  ```json
   {
     "name": "DeploymentDemo",
     "version": "1.0.0",
@@ -132,7 +132,7 @@
 5. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
 ## The .lock file
 6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
-  ```c
+  ```json
   http-server@^0.11.1:
     version "0.11.1"
     resolved "https://registry.yarnpkg.com/http-server/-/http-server-0.11.1.tgz#2302a56a6ffef7f9abea0147d838a5e9b6b6a79b"
@@ -148,7 +148,7 @@
   ```
 ## The package file
 7. Lastly, your "package.json" file has been updated with:
-  ```js
+  ```json
   "dependencies": {
     "http-server": "^0.11.1"
   }
@@ -228,12 +228,6 @@ $ env | grep "\bPATH"
   - If not, then select "New" and add the directory.
   - NOTE: GitBash displays Windows directory paths differently than Windows. For example, in GitBash /c/Users/mixel/bin/ is the equivalent of C:\Users\mixel\bin\ in Windows. In the Advanced System Settings dialogue, to add a new path, use the Windows syntax.
   - Now that the ngrok file can be found through your PATH, the ngrok command is available to CMD and Powershell.
-  - CMD:
-  ```dosbatch
-  C:\Users\mixel>ngrok --version
-      ngrok version 2.2.8
-  ```
-  - Powershell:
   ```posh
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
