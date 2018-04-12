@@ -62,7 +62,7 @@
   ```
 ## Initializing a NodeJS project
 3. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
-  ```bash
+  ```console
   $ yarn init
       yarn init v1.5.1
       question name (project_folder): DeploymentDemo
@@ -77,7 +77,7 @@
       ✨  Done in 89.54s.
   ```
   - You now have a "package.json" file. This file let's tools like `yarn` (or `npm` or `bower`) manage the dependencies ("libraries," "modules") your NodeJS project requires. You can use this file to share your project with other developers. They can use this file to install the dependencies which fit their own development environment. The ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
-    ```json
+    ```js
     {
       "name": "DeploymentDemo",
       "version": "1.0.0",
@@ -146,7 +146,7 @@
   ```
 ## The package file
 7. Lastly, your "package.json" file has been updated with:
-  ```json
+  ```js
   "dependencies": {
     "http-server": "^0.11.1"
   }
