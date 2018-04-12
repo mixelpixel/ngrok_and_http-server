@@ -1,4 +1,13 @@
 # Show the world your work!
+## Overview
+This document goes into detail about how to set up your computer and use the tools you have to deploy an HTML file to the world wide web. In short, the commands are "simple." You serve up your webpage on your computer's "localhost" with a package that was included when you installed NodeJS. The port number used with the localhost gets fed to a tool we'll set up: [ngrok](https://ngrok.com). Once your system is configured, it takes two commands:
+```console
+$ npx http-server
+```
+and:
+```console
+$ ngrok http 8080
+```
 ## Index
 1. [What's going on here?](#whats-going-on-here)
 2. [Set up your project for deployment](#set-up-your-project-for-deployment)
@@ -7,6 +16,8 @@
 5. [Deploy with `http-server` and `ngrok`](#deploy-with-http-server-and-ngrok)
 6. [Other Deployment Options](#other-deployment-options)
 ## Topics:
+* localhost
+* PORT
 * Git repository
 * Git ignore file
 * GitHub Flavored Markdown
@@ -167,7 +178,7 @@
 
 <p align="right"><a href="#index">Index</a></p>
 
-# Installing [ngrok](https://ngrok.com)
+# Installing ngrok
 13. Download the `ngrok` tool from https://ngrok.com/download
 14. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
 15. Decompress (or "expand") the .zip file.
