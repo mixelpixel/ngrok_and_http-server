@@ -4,7 +4,7 @@
 2. [Set up your project for deployment](#set-up-your-project-for-deployment)
 3. [Install NodeJS modules and dependencies for `http-server`](#install-nodejs-modules-and-dependencies-for-http-server)
 4. [Installing ngrok](#installing-ngrok)
-5. [Deploy with `ngrok` and NodeJS `http-server`](#deploy-with-ngrok-and-NodeJS-http-server)
+5. [Deploy with `http-server` and `ngrok`](#deploy-with-http-server-and-ngrok)
 6. [Other Deployment Options](#other-deployment-options)
 ## Topics:
 * Git repository
@@ -240,7 +240,7 @@ $ env | grep "\bPATH"
       ngrok version 2.2.8
   ```
 
-# Deploy with `ngrok` and NodeJS `http-server`
+# Deploy with `http-server` and `ngrok`
 25. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
   $ npx http-server
