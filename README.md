@@ -255,7 +255,7 @@ $ env | grep "\bPATH"
   - NOTE: GitBash displays Windows directory paths differently than Windows. For example, in GitBash /c/Users/mixel/bin/ is the equivalent of C:\Users\mixel\bin\ in Windows. In the Advanced System Settings dialogue, to add a new path, use the Windows syntax.
   - Now that the ngrok file can be found through your PATH, the ngrok command is available to CMD and Powershell.
   - You may need to launch a new shell for the new PATH directory to be recognized.
-  ```console
+  ```posh
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
   ```
