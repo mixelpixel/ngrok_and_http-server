@@ -164,25 +164,29 @@
   $ ./ngrok help
   ```
   - NOTE: the x's on the left indicates this is an executable file.
-13. **macOS and linux users**, you can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
+### macOS and Linux users
+13. You can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
   ```console
   $ env | grep "PATH"
       PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
   ```
   - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
   - Add the "ngrok" binary file to one of these directories.
-14. **Windows** users, with **GitBash**, you can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
+### Windows users with GitBash
+14. You can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
   ```gitbash
   $ env | grep "\bPATH"
       PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
       PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
   ```
-15. macOS, linux and GitBash users can now verify the installation of the ngrok progam like so:
+### macOS, Linux and GitBash users can now verify the installation of the ngrok progam:
+15. Like so:
   ```console
   $ ngrok --version
       ngrok version 2.2.8
   ```
-16. **Windows** user, with **CMD** or **Powershell** you'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
+### Windows users with CMD or Powershell
+16. You'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
   - Click on the Window icon (lower left).
   - Type "sdvanced system settings".
   - Click the "View Advanced System Settings" Control Panel icon.
