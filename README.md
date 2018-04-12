@@ -247,7 +247,7 @@ $ env | grep "\bPATH"
   - Type "advanced system settings".
   - Click the "View Advanced System Settings" Control Panel icon.
   - Select "Environmental Variables."
-  - Select "PATH" from the User Variables list (top half, NOT the System Variables on the bottom).
+  - Select "Path" from the User Variables list (top half, NOT the System Variables on the bottom).
   - Select "Edit"
   - Is the path to the directory where you put the ngrok executable binary file in this list?
     - If so, then close the Environmental Variables and System Properties windows.
