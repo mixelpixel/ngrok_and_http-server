@@ -151,7 +151,7 @@
     "http-server": "^0.11.1"
   }
   ```
-## Installing [ngrok(https://ngrok.com)]
+## Installing [ngrok](https://ngrok.com)
 8. Download the `ngrok` tool from https://ngrok.com/download
 9. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
 10. Decompress (or "expand") the .zip file.
