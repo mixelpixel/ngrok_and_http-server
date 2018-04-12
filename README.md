@@ -1,19 +1,19 @@
 # Show the world your work!
 ## Topics:
-1. Git repository
-2. Git ignore file
-3. GitHub Flavored Markdown
-4. HTML
-5. Initializing NodeJS projects with Yarn
-6. Adding NodeJS modules with `yarn add`
-7. Dependency management with a "package.json" file
-8. Dependency and version locking with a ".lock" file
-9. Ngrok
-10. Accessing binary executables through your environment's PATH
-11. Global Regular Expression Print
-12. `npx`
-13. URL
-14. HTTP
+* Git repository
+* Git ignore file
+* GitHub Flavored Markdown
+* HTML
+* Initializing NodeJS projects with Yarn
+* Adding NodeJS modules with `yarn add`
+* Dependency management with a "package.json" file
+* Dependency and version locking with a ".lock" file
+* Ngrok
+* Accessing binary executables through your environment's PATH
+* Global Regular Expression Print
+* `npx`
+* URL
+* HTTP
 
 # What's going on here?
 ### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period may be hidden from your view by your operating system. Here's how to see them in [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
@@ -151,9 +151,9 @@
     "http-server": "^0.11.1"
   }
   ```
-## Installing ngrok
-8. Install the `ngrok` tool from https://ngrok.com/download
-9. This will download the _binary_, _executable_ program file. The download will deliver a compressed ".zip" file
+## Installing [ngrok(https://ngrok.com)]
+8. Download the `ngrok` tool from https://ngrok.com/download
+9. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
 10. Decompress (or "expand") the .zip file.
 11. Windows users, take the `"ngrok" file out of the .zip file.
 12. You can run the command in your console directly from the directory location of the "ngrok" file, e.g. `$ cd path/to/the/ngrok/file`, i.e.:
@@ -164,29 +164,57 @@
   $ ./ngrok help
   ```
   - NOTE: the x's on the left indicates this is an executable file.
-### macOS and Linux users
-13. You can display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
+## Your environment, PATH and `grep`
+13. Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. Your console operates in an enviroment containnig _lots_ of variables and conditions. You can display your computer's environment variables with the `env` command, but the command will display _a lot_ of stuff. For example:
   ```console
-  $ env | grep "PATH"
-      PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+  $ env
+      TERM_PROGRAM=Apple_Terminal
+      SHELL=/bin/bash
+      TERM=xterm-256color
+      TMPDIR=/var/folders/gv/jzhl4n_j2gz6_hjvq4f2xq9h0000gq/T/
+      Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.HkSLiQezds/Render
+      TERM_PROGRAM_VERSION=404
+      OLDPWD=/Users/mixelpix
+      TERM_SESSION_ID=236F6B77-3B9D-4903-A9A4-C72BD0CB5E4C
+      USER=mixelpix
+      SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.VoWn3sqmt7/Listeners
+      PATH=/usr/local/bin:/Users/mixelpix/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/go/bin:/opt/X11/bin
+      PWD=/Users/mixelpix/Desktop/ngrok_and_http-server
+      LANG=en_US.UTF-8
+      XPC_FLAGS=0x0
+      PS1=\# \h \d \t$
+      RBENV_SHELL=bash
+      XPC_SERVICE_NAME=0
+      SHLVL=1
+      HOME=/Users/mixelpix
+      LOGNAME=mixelpix
+      DISPLAY=/private/tmp/com.apple.launchd.glQCmHIFzW/org.macosforge.xquartz:0
+      _=/usr/bin/env
   ```
-  - Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
-  - Add the "ngrok" binary file to one of these directories.
-### Windows users with GitBash
-14. You can also display your computer's environment variables with the `env` command. This will display a bunch of stuff. To limit the `env` command return to only displaying your PATH directories, pipe in a `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" but I think of it as, "Get Regular ExPressions". Using `grep` with `env` you should see something like this:
-  ```gitbash
-  $ env | grep "\bPATH"
-      PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
-      PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
-  ```
+
+14. For now, we're just interested in the directories available through your environment's "PATH." The PATH is the collection of directories your computer looks in when a command is invoked. To limit the `env` command's return, and only displaying your PATH directories, pipe in a `grep` command. The pipe operator, `|` takes the results from the `env` command and "pipes" them into the `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" (but I think of it as, "Get Regular ExPressions.")
+15. Piping `env` into a "PATH" `grep`, you should a string of directories separated only by a colon `:`. For example, something like this:
+### macOS and Linux users
+```console
+$ env | grep "PATH"
+    PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+```
+### Windows users with GitBash - use `\b` to constrain the grep "boundaries"
+```gitbash
+$ env | grep "\bPATH"
+    PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+    PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
+```
+15. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
+## Copy or move the "ngrok" binary file to one of these directories.
 ### macOS, Linux and GitBash users can now verify the installation of the ngrok progam:
-15. Like so:
+17. Like so:
   ```console
   $ ngrok --version
       ngrok version 2.2.8
   ```
 ### Windows users with CMD or Powershell
-16. You'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
+18. You'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
   - Click on the Window icon (lower left).
   - Type "sdvanced system settings".
   - Click the "View Advanced System Settings" Control Panel icon.
@@ -210,7 +238,7 @@
   ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
-17. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
+19. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
   $ npx http-server
       npx: installed 23 in 5.588s
@@ -221,11 +249,11 @@
         http://192.168.88.236:8080
       Hit CTRL-C to stop the server
   ```
-18. Make note of the port number, and in another console, feed it to ngrok's http method:
+20. Make note of the port number, and in another console, feed it to ngrok's http method:
   ```console
   $ ngrok http 8080
   ```
-19. You should see something like this:
+21. You should see something like this:
   ```console
   ngrok by @inconshreveable                               (Ctrl+C to quit)
 
@@ -240,14 +268,14 @@
   Connections                   ttl     opn     rt1     rt5     p50     p90
                                 0       0       0.00    0.00    0.00    0.00
   ```
-20. Congratulations, you are serving up your HTML file to the world!
-21. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
-22. Paste the URL into your browser to see how it looks from the world wide web.
-23. Share with your friends :)
-24. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
-25. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
-26. Add another header element to your HTML file and save the file.
-27. Did your web page update on the fly? How cool is that!!
+22. Congratulations, you are serving up your HTML file to the world!
+23. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
+24. Paste the URL into your browser to see how it looks from the world wide web.
+25. Share with your friends :)
+26. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
+27. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
+28. Add another header element to your HTML file and save the file.
+29. Did your web page update on the fly? How cool is that!!
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
