@@ -46,8 +46,8 @@
 
 # Set up your project for deployment
 ## Project folder and an HTML file
-1. Make a project folder.
-2. Inside of your project folder, write an .html file which displays a "Hello world!" message, e.g.
+5. Make a project folder.
+6. Inside of your project folder, write an .html file which displays a "Hello world!" message, e.g.
   ```html
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -61,7 +61,7 @@
   </html>
   ```
 ## Initializing a NodeJS project
-3. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
+7. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
   ```console
   $ yarn init
       yarn init v1.5.1
@@ -76,8 +76,8 @@
       success Saved package.json
       ✨  Done in 89.54s.
   ```
-## package.json
-4. Having used Yarn to initialize a NodeJS project, you now have a "package.json" file. Right now, it just contains the information you supplied from the initialization questionnaire. The package.json file can do a lot more, but for this exercise, we'll just be using it to make note of the `http-server` pakage we'll add shortly. In a NodeJS project, the package.json file let's tools like `yarn` and `npm` manage the dependencies ("libraries," "modules") your NodeJS project requires. Also, the package.json file let's developers share their projects with other developers. We can use this file to install the dependencies which fit our own particular development environment. Lastly, the ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
+## The package.json file
+8. Having used Yarn to initialize a NodeJS project, you now have a "package.json" file. Right now, it just contains the information you supplied from the initialization questionnaire. The package.json file can do a lot more, but for this exercise, we'll just be using it to make note of the `http-server` pakage we'll add shortly. In a NodeJS project, the package.json file let's tools like `yarn` and `npm` manage the dependencies ("libraries," "modules") your NodeJS project requires. Also, the package.json file let's developers share their projects with other developers. We can use this file to install the dependencies which fit our own particular development environment. Lastly, the ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
   ```json
   {
     "name": "DeploymentDemo",
@@ -91,7 +91,7 @@
   }
   ```
 ## Install NodeJS modules and dependencies for `http-server`
-4. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
+9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
   $ yarn add htpp-server
       yarn add v1.5.1
@@ -129,9 +129,9 @@
       ✨  Done in 2.07s.
   ```
   - NOTE: sorry Windows users, you don't get the icons :(
-5. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
+10. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
 ## The .lock file
-6. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
+11. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. Similarly, you don't want to modify this file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
   ```json
   http-server@^0.11.1:
     version "0.11.1"
@@ -146,28 +146,28 @@
       portfinder "^1.0.13"
       union "~0.4.3"
   ```
-## The package file
-7. Lastly, your "package.json" file has been updated with:
+## The package.json dependency list
+12. Even though a number of modules have been installed in your project, Yarn is smart enough to manage all the dependencies that `http-server` requires. Even though there's a lot of them, your "package.json" file has been updated with just the one we installed:
   ```json
   "dependencies": {
     "http-server": "^0.11.1"
   }
   ```
 ## Installing [ngrok](https://ngrok.com)
-8. Download the `ngrok` tool from https://ngrok.com/download
-9. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
-10. Decompress (or "expand") the .zip file.
-11. Windows users, take the `"ngrok" file out of the .zip file.
-12. You can run the command in your console directly from the directory location of the "ngrok" file, e.g. `$ cd path/to/the/ngrok/file`, i.e.:
+13. Download the `ngrok` tool from https://ngrok.com/download
+14. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
+15. Decompress (or "expand") the .zip file.
+16. Windows users, take the `"ngrok" file out of the .zip file.
+17. You can run the command in your console directly from the directory location of the "ngrok" file, e.g. `$ cd path/to/the/ngrok/file`, i.e.:
   ```console
   $ cd ~/Downloads
   $ ls -l ngrok
       -rwxr-xr-x@ 1 mixelpix  staff  16046668 Jul 15  2017 ngrok
   $ ./ngrok help
   ```
-  - NOTE: the x's on the left indicates this is an executable file.
+  - NOTE: the x's on the left indicates this is an executable file. The `./` tells the console to run the binary file.
 ## Your environment, PATH and `grep`
-13. Each time you enter a command in your console, these are the directories your computer looks in to see if there is an executable binary whose title matches the text string of the comand name you've entered. Your console operates in an enviroment containnig _lots_ of variables and conditions. You can display your computer's environment variables with the `env` command, but the command will display _a lot_ of stuff. For example:
+18. Each time you enter a command in your console, your console looks for the binary file which corresponds to the command name. Your PATH is a variable in your environment. Your enviroment contains _lots_ of variables. You can display your computer's environment variables with the `env` command. For example:
   ```console
   $ env
       TERM_PROGRAM=Apple_Terminal
@@ -194,8 +194,8 @@
       _=/usr/bin/env
   ```
 
-14. For now, we're just interested in the directories available through your environment's "PATH." The PATH is the collection of directories your computer looks in when a command is invoked. To limit the `env` command's return, and only displaying your PATH directories, pipe in a `grep` command. The pipe operator, `|` takes the results from the `env` command and "pipes" them into the `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" (but I think of it as, "Get Regular ExPressions.")
-15. Piping `env` into a "PATH" `grep`, you should a string of directories separated only by a colon `:`. For example, something like this:
+19. For now, we're just interested in the directories available through your environment's "PATH." The PATH is the collection of directories your computer looks in when a command is invoked. To limit the `env` command's return and only display your PATH directories, pipe in a `grep` command. The pipe operator ()`|`) takes the results from the `env` command and "pipes" them into the `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" (but I think of it as, "Get Regular ExPressions."). Using the pipe, the `grep` command looks for lines of text which match a pattern.
+20. Piping `env` into a "PATH" `grep`, you should a string of directories separated only by a colon `:`. For example, something like this:
 ### macOS and Linux users
 ```console
 $ env | grep "PATH"
@@ -207,34 +207,35 @@ $ env | grep "\bPATH"
     PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
     PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
 ```
-15. The left to right order is the order your computer looks in. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
-## Copy or move the "ngrok" binary file to one of these directories.
-### macOS, Linux and GitBash users can now verify the installation of the ngrok progam:
-17. Like so:
+21. The left to right order is the order your computer searches by. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
+22. Copy or move the "ngrok" binary file to one of the directories in your PATH.
+### macOS, Linux and GitBash users can now verify the installation of the ngrok progam and it's availability through their PATH:
+23. Like so:
   ```console
   $ ngrok --version
       ngrok version 2.2.8
   ```
 ### Windows users with CMD or Powershell
-18. You'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
+24. You'll need to make sure the PATH to the "ngrok" binary file is available in your Advanced System Settings Environmental Variables.
   - Click on the Window icon (lower left).
-  - Type "sdvanced system settings".
+  - Type "advanced system settings".
   - Click the "View Advanced System Settings" Control Panel icon.
   - Select "Environmental Variables."
-  - Select PATH from the User Variables list (top half, NOT the System Variables on the bottom).
+  - Select "PATH" from the User Variables list (top half, NOT the System Variables on the bottom).
   - Select "Edit"
   - Is the path to the directory where you put the ngrok executable binary file in this list?
-  - If so, then close the Environmental Variables and System Properties windows.
-  - If not, then select "New" and add the directory.
+    - If so, then close the Environmental Variables and System Properties windows.
+    - If not, then select "New" and add the directory.
   - NOTE: GitBash displays Windows directory paths differently than Windows. For example, in GitBash /c/Users/mixel/bin/ is the equivalent of C:\Users\mixel\bin\ in Windows. In the Advanced System Settings dialogue, to add a new path, use the Windows syntax.
   - Now that the ngrok file can be found through your PATH, the ngrok command is available to CMD and Powershell.
+  - You may need to launch a new shell for the new PATH directory to be recognized.
   ```posh
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
   ```
 
 # Deploy with `ngrok` and NodeJS `http-server`
-19. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
+25. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
   $ npx http-server
       npx: installed 23 in 5.588s
@@ -245,11 +246,11 @@ $ env | grep "\bPATH"
         http://192.168.88.236:8080
       Hit CTRL-C to stop the server
   ```
-20. Make note of the port number, and in another console, feed it to ngrok's http method:
+26. Make note of the port number, and in another console, feed the port number to ngrok's http method:
   ```console
   $ ngrok http 8080
   ```
-21. You should see something like this:
+27. You should see something like this:
   ```console
   ngrok by @inconshreveable                               (Ctrl+C to quit)
 
@@ -264,14 +265,14 @@ $ env | grep "\bPATH"
   Connections                   ttl     opn     rt1     rt5     p50     p90
                                 0       0       0.00    0.00    0.00    0.00
   ```
-22. Congratulations, you are serving up your HTML file to the world!
-23. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
-24. Paste the URL into your browser to see how it looks from the world wide web.
-25. Share with your friends :)
-26. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
-27. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
-28. Add another header element to your HTML file and save the file.
-29. Did your web page update on the fly? How cool is that!!
+28. Congratulations, you are serving up your HTML file to the world!
+29. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
+30. Paste the URL into your browser to see how it looks from the world wide web.
+31. Share with your friends :)
+32. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
+33. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
+34. Add another header element to your HTML file and save the file.
+35. Did your web page update on the fly? How cool is that!!
 
 #### Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
