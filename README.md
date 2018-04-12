@@ -228,7 +228,7 @@ $ env | grep "PATH"
     PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 ```
 ### Windows users with GitBash - use `\b` to constrain the grep "boundaries"
-```gitbash
+```posh
 $ env | grep "\bPATH"
     PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
     PATH=/c/Users/mixel/bin:/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/mingw64/bin:/usr/bin:/c/Users/mixel/bin:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Program Files/nodejs:/c/Program Files (x86)/Yarn/bin:/cmd:/c/Users/mixel/AppData/Local/Microsoft/WindowsApps:/c/Users/mixel/AppData/Roaming/npm:/c/Users/mixel/AppData/Local/Yarn/bin:/c/Program Files/Microsoft VS Code/bin:/c/Program Files/MongoDB/Server/3.6/bin:/c/Users/mixel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl
