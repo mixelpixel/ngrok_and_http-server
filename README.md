@@ -1,6 +1,6 @@
 # Show the world your work!
 ## Overview
-This document goes into detail about how to set up your computer and use the tools you have to deploy an HTML file to the world wide web. In short, the commands are "simple." You serve up your webpage on your computer's "localhost" with a package that was included when you installed NodeJS. The port number used with the localhost gets fed to a tool we'll set up: [ngrok](https://ngrok.com). Once your system is configured, it takes two commands:
+This document goes into detail about how to set up your computer and use the tools you have to deploy an HTML file to the world wide web. In short, the commands are "simple." You'll serve up your webpage on your computer's "localhost" with a tool that was included when you installed NodeJS: [`npx`](https://github.com/zkat/npx). We'll also set up a NodeJS project and use the [http-server](https://www.npmjs.com/package/http-server) module. The port number used with the localhost gets fed to a tool we'll set up as a command in your console: [ngrok](https://ngrok.com). Once your system is configured, it takes two commands:
 ```console
 $ npx http-server
 ```
@@ -152,6 +152,7 @@ $ ngrok http 8080
   ```
   - NOTE: sorry Windows users, you don't get the icons :(
 10. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
+  - NOTE: you could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :)
 ## The yarn.lock file
 11. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. This doesn't matter so much for the projects we'll work on in Lambda School, but for big projects with large teams of developers which last a long time, locking in versions is mission critical! Similarly with the files in the node_modules and .git directories, you don't want to modify the yarn.lock file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
   ```json
