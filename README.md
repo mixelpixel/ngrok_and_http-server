@@ -50,7 +50,7 @@
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 
-<p align="right"> [Index](#index) <p>
+<div align="right"> [Index](#index) </div>
 
 # Set up your project for deployment
 ## Project folder and an HTML file
