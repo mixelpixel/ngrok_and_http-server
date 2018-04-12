@@ -49,7 +49,7 @@
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
 # Set up your project for deployment
 ## Project folder and an HTML file
 5. Make a project folder.
@@ -96,7 +96,7 @@
     "private": false,
   }
   ```
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
 # Install NodeJS modules and dependencies for `http-server`
 9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
@@ -160,7 +160,7 @@
     "http-server": "^0.11.1"
   }
   ```
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
 # Installing [ngrok](https://ngrok.com)
 13. Download the `ngrok` tool from https://ngrok.com/download
 14. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
@@ -241,7 +241,7 @@ $ env | grep "\bPATH"
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
   ```
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
 # Deploy with `http-server` and `ngrok`
 25. Use the [`npx`](https://github.com/zkat/npx) command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
@@ -281,7 +281,7 @@ $ env | grep "\bPATH"
 33. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
 34. Add another header element to your HTML file and save the file.
 35. Did your web page update on the fly? How cool is that!!
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
 # Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
@@ -295,4 +295,4 @@ $ env | grep "\bPATH"
 - Microsoft Azure: https://azure.microsoft.com/en-us/free/search/
 - AWS free tier: https://aws.amazon.com/free/
 - Google Cloud free tier: https://cloud.google.com/free/
-##### [Index](#index)
+[<p align="right">[Index](#index)<p>]
