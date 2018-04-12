@@ -60,13 +60,13 @@ $ ngrok http 8080
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
+5. You may have also noticed that **favicon.ico** file. What's all about?
 
 <p align="right"><a href="#index">Index</a></p>
 
 # Set up your project for deployment
 ## Project folder and an HTML file
-5. Make a project folder.
-6. Inside of your project folder, write an .html file which displays a "Hello world!" message, e.g.
+6. Inside this project folder, write an HTML file which displays a "Hello world!" message, e.g.
   ```html
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
@@ -80,7 +80,7 @@ $ ngrok http 8080
   </html>
   ```
 ## Initializing a NodeJS project
-7. Inside of your project folder, initialize a NodeJS project with the Yarn initialization command:
+7. Now initialize a NodeJS project with the Yarn initialization command:
   ```console
   $ yarn init
       yarn init v1.5.1
@@ -99,14 +99,14 @@ $ ngrok http 8080
 8. Having used Yarn to initialize a NodeJS project, you now have a "package.json" file. Right now, it just contains the information you supplied from the initialization questionnaire. The package.json file can do a lot more, but for this exercise, we'll just be using it to make note of the `http-server` pakage we'll add shortly. In a NodeJS project, the package.json file let's tools like `yarn` and `npm` manage the dependencies ("libraries," "modules") your NodeJS project requires. Also, the package.json file let's developers share their projects with other developers. We can use this file to install the dependencies which fit our own particular development environment. Lastly, the ".json" file extension indicates that this is a [JSON](https://simple.wikipedia.org/wiki/JSON) file. JSON is an acronym for JavaScript Object Notation. Your "package.json" file should now look something like this:
   ```json
   {
-    "name": "DeploymentDemo",
+    "name": "ngrok_and_http-server",
     "version": "1.0.0",
-    "description": "ngrok and http-server deployment demo",
-    "main": "project_folder/helloWorld.html",
+    "description": "demo",
+    "main": "index.html",
     "repository": "https://github.com/mixelpixel/ngrok_and_http-server.git",
-    "author": "Patrick Kennedy",
+    "author": "mixelpixel <mixelpix@mac.com>",
     "license": "MIT",
-    "private": false,
+    "private": false
   }
   ```
 
@@ -151,7 +151,7 @@ $ ngrok http 8080
       ✨  Done in 2.07s.
   ```
   - NOTE: sorry Windows users, you don't get the icons :(
-10. Look in your project_folder/node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
+10. Look in the node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
   - NOTE: you could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :)
 ## The yarn.lock file
 11. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. This doesn't matter so much for the projects we'll work on in Lambda School, but for big projects with large teams of developers which last a long time, locking in versions is mission critical! Similarly with the files in the node_modules and .git directories, you don't want to modify the yarn.lock file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
@@ -329,5 +329,14 @@ $ env | grep "\bPATH"
       Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
   ```
   - Then, in another console, run ngrok with the port number python serves up.
+
+# BONUS: favicon.icon
+1. Add this link in the head `<head>` section of your HTML file:
+  ```html
+  <link href="/favicon.ico" type="image/x-icon" />
+  ```
+2. If it wasn't already showing up, now the favicon.ico file will get displayed in the browser tab for your web page!
+3. NOTE: if you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
+4. If you change the name of your HTML to something other than "index.html," ngrok will display the directory contents - gve it a try!
 
 <p align="right"><a href="#index">Index</a></p>
