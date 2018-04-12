@@ -1,4 +1,11 @@
 # Show the world your work!
+# Index
+1. [What's going on here?](#whats-going-on-here)
+2. [Set up your project for deployment](#set-up-your-project-for-deployment)
+3. [Install NodeJS modules and dependencies for `http-server`](#install-nodejs-modules-and-dependencies-for-http-server)
+4. [Installing ngrok](#installing-ngrok)
+5. [Deploy with `ngrok` and NodeJS `http-server`](#deploy-with-ngrok-and-NodeJS-http-server)
+6. [Other Deployment Options](#other-deployment-options)
 ## Topics:
 * Git repository
 * Git ignore file
@@ -13,8 +20,7 @@
 * Global Regular Expression Print
 * `npx`
 * URL
-* HTTP
-
+* HTTP/HTTPS
 # What's going on here?
 ### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period may be hidden from your view by your operating system. Here's how to see them in [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
 1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - one of many markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare the text in the README>md file to the display of it on GitHub. Pretty neat, huh? GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
@@ -90,7 +96,7 @@
     "private": false,
   }
   ```
-## Install NodeJS modules and dependencies for `http-server`
+# Install NodeJS modules and dependencies for `http-server`
 9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
   $ yarn add htpp-server
@@ -153,7 +159,7 @@
     "http-server": "^0.11.1"
   }
   ```
-## Installing [ngrok](https://ngrok.com)
+# Installing [ngrok](https://ngrok.com)
 13. Download the `ngrok` tool from https://ngrok.com/download
 14. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
 15. Decompress (or "expand") the .zip file.
@@ -274,7 +280,7 @@ $ env | grep "\bPATH"
 34. Add another header element to your HTML file and save the file.
 35. Did your web page update on the fly? How cool is that!!
 
-#### Other Deployment Options
+# Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
 - GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
