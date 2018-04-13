@@ -33,7 +33,7 @@ $ ngrok http 8080
 * URL
 * HTTP/HTTPS
 # What's going on here?
-### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period may be hidden from your view by your operating system. Here's how to see them in [Windows](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
+### This Git repository comes with a "README.md" file, a ".gitignore" file, and a ".git" project folder. Note that files and directories whose names begin with a period may be hidden from your view by your operating system. Here's how to see them in [Windows Explorer](https://support.microsoft.com/en-us/help/14201/windows-show-hidden-files). In macOS you can toggle the Finder display of invisible files with `cmd`+`shift`+`.`
 1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - one of many markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare the text in the README>md file to the display of it on GitHub. Pretty neat, huh? GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
 2. The **.gitignore** file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. As an example, the list of items in this .gitignore file has the following effect:
   ```config
@@ -58,6 +58,14 @@ $ ngrok http 8080
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:49 logs
       drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
       drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
+  ```
+  - CMD users can use the `dir` command with the `a`ttributes and `h`idden options
+  ```console
+
+  ```
+  - Powershell users can invoke the `Get-ChildItem` command with the `-Force` option.
+  ```posh
+  
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 5. You may have also noticed that **favicon.ico** file. What's all about?
@@ -115,7 +123,7 @@ $ ngrok http 8080
 # Install NodeJS modules and dependencies for `http-server`
 9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
-  $ yarn add htpp-server
+  $ yarn add http-server
       yarn add v1.5.1
       info No lockfile found.
       [1/4] 🔍  Resolving packages...
