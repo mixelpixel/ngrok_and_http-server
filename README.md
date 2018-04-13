@@ -115,7 +115,9 @@ $ ngrok http 8080
   ```
   - NOTE: Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 5. You may have also noticed that **favicon.ico** file. What's all about?
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Set up your project for deployment
 ## Project folder and an HTML file
 6. Inside this project folder, write an HTML file which displays a "Hello world!" message, e.g.
@@ -161,7 +163,9 @@ $ ngrok http 8080
     "private": false
   }
   ```
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Install NodeJS modules and dependencies for `http-server`
 9. Your NodeJS project will _**depend**_ upon it, so "add" the `http-server` module.
   ```console
@@ -226,7 +230,9 @@ $ ngrok http 8080
     "http-server": "^0.11.1"
   }
   ```
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Installing ngrok
 13. Download the `ngrok` tool from https://ngrok.com/download
 14. The download will deliver a compressed ".zip" file. Within the .zip file is the _binary_, _executable_ program file.
@@ -307,7 +313,9 @@ $ env | grep "\bPATH"
   PS C:\Users\mixel> ngrok --version
       ngrok version 2.2.8
   ```
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Deploy with `http-server` and `ngrok`
 25. Use the `npx` command to serve up the project on a local port. The `npx` tool gets installed with the NodeJS installation.
   ```console
@@ -349,7 +357,9 @@ $ env | grep "\bPATH"
 35. Did your web page update on the fly? How cool is that!!
 36. NOTE: If you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
 37. If you change the name of your HTML to something other than "index.html," ngrok will display the directory contents - gve it a try!
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
@@ -382,7 +392,9 @@ $ env | grep "\bPATH"
   <link href="/favicon.ico" type="image/x-icon" />
   ```
 2. If it wasn't already showing up, now the favicon.ico image file will get displayed in the browser tab for your web page!
+
 <p align="right"><a href="#index">Index</a></p>
+
 # Self-Study Questions: Please write your answers in the ANSWERS.md file, thanks!
 1. What is a localhost?
 2. How is a port number used?
@@ -401,4 +413,5 @@ $ env | grep "\bPATH"
 15. What's this `npx` all about?
 16. What is URL an acronym for? How is a URL different from a URI?
 17. What are HTTP & HTTPS acronyms for? How are HTTP and HTTPS different from each other?
+
 <p align="right"><a href="#index">Index</a></p>
