@@ -17,11 +17,12 @@ $ ngrok http 8080
 6. [Other Deployment Options](#other-deployment-options)
 ## Topics:
 * localhost
-* PORT
+* Port number
 * Git repository
 * Git ignore file
 * GitHub Flavored Markdown
 * HTML
+* NodeJS
 * Initializing NodeJS projects with Yarn
 * Adding NodeJS modules with `yarn add`
 * Dependency management with a "package.json" file
@@ -393,3 +394,22 @@ $ env | grep "\bPATH"
 2. If it wasn't already showing up, now the favicon.ico image file will get displayed in the browser tab for your web page!
 
 <p align="right"><a href="#index">Index</a></p>
+
+# Self-Study Questions
+1. What is a localhost?
+2. How is a port number used?
+3. What is a Git repository?
+4. How is a Git ignore file used?
+5. What is GitHub Flavored Markdown? What's the difference between "markup" and "markdown"?
+6. What is HTML an acronym for?
+7. What is NodeJS? Which engine does it use?
+8. What is Yarn?
+9. How does Yarn help NodeJS project management? What are dependencies?
+10. What does a "package.json" file for?
+11. How are ".lock" files helpful?
+12. What in the world is ngrok?
+13. How do you access binary executables through your environment's PATH?
+14. What in the world is Global Regular Expression Print?
+15. What's this `npx` all about?
+16. What is URL an acronym for? How is a URL different from a URI?
+17. What are HTTP & HTTPS acronyms for? How are HTTP and HTTPS different from each other?
