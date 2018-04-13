@@ -203,9 +203,9 @@ $ ngrok http 8080
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
   ```
-  - NOTE: Sorry Windows users, you don't get the icons :(
+  - NOTE: Sorry Windows users, you don't get the icons in Yarn :sob:
 10. Look in the node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
-  - NOTE: You could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :)
+  - NOTE: You could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :smiley_cat:
 ## The yarn.lock file
 11. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. This doesn't matter so much for the projects we'll work on in Lambda School, but for big projects with large teams of developers which last a long time, locking in versions is mission critical! Similarly with the files in the node_modules and .git directories, you don't want to modify the yarn.lock file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
   ```json
