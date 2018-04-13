@@ -349,7 +349,7 @@ $ env | grep "\bPATH"
 28. Congratulations, you are serving up your HTML file to the world :tada:
 29. Copy one of the "Forwarding" URLS, e.g. `https://202c6e30.ngrok.io`
 30. Paste the URL into your browser to see how it looks from the world wide web.
-31. Share with your friends :earth_africa: :earth_americas: :earth_asia: 
+31. Share with your friends :earth_africa: :earth_americas: :earth_asia:
 32. Note that as people visit your website, ngrok will display information about the HTTP requests being made.
 33. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
 34. Add another header element to your HTML file and save the file.
@@ -362,7 +362,7 @@ $ env | grep "\bPATH"
 # Other Deployment Options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
-- GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
+  - GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
 - Digital Ocean: https://www.digitalocean.com/
 - Heroku: https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction
   - https://devcenter.heroku.com/articles/mongolab
