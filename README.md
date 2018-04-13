@@ -395,7 +395,7 @@ $ env | grep "\bPATH"
 
 <p align="right"><a href="#index">Index</a></p>
 
-# Self-Study Questions
+# Self-Study Questions: Please write your answers in the ANSWERS.md file, thanks!
 1. What is a localhost?
 2. How is a port number used?
 3. What is a Git repository?
