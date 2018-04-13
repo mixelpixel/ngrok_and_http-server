@@ -62,47 +62,57 @@ $ ngrok http 8080
   - CMD users can use the `dir` command (hidden files and folders get shown using the `a`ttributes or `h`idden options).
   ```posh
   C:\Users\mixel\Desktop\ngrok_and_http-server>dir .git /a
-      Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+        Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
 
-      04/13/2018  08:19 AM    <DIR>          .
-      04/13/2018  08:19 AM    <DIR>          ..
-      04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
-      04/11/2018  03:32 PM               318 config
-      04/11/2018  03:32 PM                73 description
-      04/13/2018  08:19 AM               261 FETCH_HEAD
-      04/11/2018  03:32 PM                23 HEAD
-      04/11/2018  03:32 PM    <DIR>          hooks
-      04/13/2018  08:19 AM               297 index
-      04/11/2018  03:32 PM    <DIR>          info
-      04/11/2018  03:32 PM    <DIR>          logs
-      04/11/2018  03:52 PM    <DIR>          objects
-      04/13/2018  08:19 AM                41 ORIG_HEAD
-      04/11/2018  03:32 PM               114 packed-refs
-      04/11/2018  03:32 PM    <DIR>          refs
-                     8 File(s)          1,132 bytes
-                     7 Dir(s)  29,301,006,336 bytes free
+        04/13/2018  08:19 AM    <DIR>          .
+        04/13/2018  08:19 AM    <DIR>          ..
+        04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
+        04/11/2018  03:32 PM               318 config
+        04/11/2018  03:32 PM                73 description
+        04/13/2018  08:19 AM               261 FETCH_HEAD
+        04/11/2018  03:32 PM                23 HEAD
+        04/11/2018  03:32 PM    <DIR>          hooks
+        04/13/2018  08:19 AM               297 index
+        04/11/2018  03:32 PM    <DIR>          info
+        04/11/2018  03:32 PM    <DIR>          logs
+        04/11/2018  03:52 PM    <DIR>          objects
+        04/13/2018  08:19 AM                41 ORIG_HEAD
+        04/11/2018  03:32 PM               114 packed-refs
+        04/11/2018  03:32 PM    <DIR>          refs
+                       8 File(s)          1,132 bytes
+                       7 Dir(s)  29,301,006,336 bytes free
   ```
   - Powershell users can invoke the `Get-ChildItem` command (see hidden files and folder with the `-Force` option).
   ```posh
   PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
-      Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
-      Mode                LastWriteTime         Length Name
-      ----                -------------         ------ ----
-      d-----        4/11/2018   3:32 PM                hooks
-      d-----        4/11/2018   3:32 PM                info
-      d-----        4/11/2018   3:32 PM                logs
-      d-----        4/11/2018   3:52 PM                objects
-      d-----        4/11/2018   3:32 PM                refs
-      -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
-      -a----        4/11/2018   3:32 PM            318 config
-      -a----        4/11/2018   3:32 PM             73 description
-      -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
-      -a----        4/11/2018   3:32 PM             23 HEAD
-      -a----        4/13/2018   8:19 AM            297 index
-      -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
-      -a----        4/11/2018   3:32 PM            114 packed-refs
+        Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+        Mode                LastWriteTime         Length Name
+        ----                -------------         ------ ----
+        d-----        4/11/2018   3:32 PM                hooks
+        d-----        4/11/2018   3:32 PM                info
+        d-----        4/11/2018   3:32 PM                logs
+        d-----        4/11/2018   3:52 PM                objects
+        d-----        4/11/2018   3:32 PM                refs
+        -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
+        -a----        4/11/2018   3:32 PM            318 config
+        -a----        4/11/2018   3:32 PM             73 description
+        -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
+        -a----        4/11/2018   3:32 PM             23 HEAD
+        -a----        4/13/2018   8:19 AM            297 index
+        -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
+        -a----        4/11/2018   3:32 PM            114 packed-refs
   ```
-4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list. Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
+4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list until you find the very first commit message:
+  ```console
+  commit ad3af00d0e8ac410b5baddf99e307293bb373e33
+  Author: mixelpixel <mixelpix@mac.com>
+  Date:   Wed Apr 11 10:49:15 2018 -0400
+
+      that new git repository smell!
+
+      - README.md documenting how to use ngrok and http-server to deploy
+  ```
+  - Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 5. You may have also noticed that **favicon.ico** file. What's all about?
 
 <p align="right"><a href="#index">Index</a></p>
