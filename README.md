@@ -301,6 +301,8 @@ $ env | grep "\bPATH"
 33. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
 34. Add another header element to your HTML file and save the file.
 35. Did your web page update on the fly? How cool is that!!
+36. NOTE: if you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
+37. If you change the name of your HTML to something other than "index.html," ngrok will display the directory contents - gve it a try!
 
 <p align="right"><a href="#index">Index</a></p>
 
@@ -319,24 +321,22 @@ $ env | grep "\bPATH"
 - Google Cloud free tier: https://cloud.google.com/free/
 - Python
   - From the command line, `cd` to the directory containing your HTML files and run:
-  ```console
-  $ python -m SimpleHTTPServer
-      Serving HTTP on 0.0.0.0 port 8000 ...
-  ```
+    ```console
+    $ python -m SimpleHTTPServer
+        Serving HTTP on 0.0.0.0 port 8000 ...
+    ```
   - For python3
-  ```console
-  $ python3 -m http.server
-      Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
-  ```
+    ```console
+    $ python3 -m http.server
+        Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+    ```
   - Then, in another console, run ngrok with the port number python serves up.
 
-# BONUS: favicon.icon
+# BONUS: favicon.ico
 1. Add this link in the head `<head>` section of your HTML file:
   ```html
   <link href="/favicon.ico" type="image/x-icon" />
   ```
-2. If it wasn't already showing up, now the favicon.ico file will get displayed in the browser tab for your web page!
-3. NOTE: if you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
-4. If you change the name of your HTML to something other than "index.html," ngrok will display the directory contents - gve it a try!
+2. If it wasn't already showing up, now the favicon.ico image file will get displayed in the browser tab for your web page!
 
 <p align="right"><a href="#index">Index</a></p>
