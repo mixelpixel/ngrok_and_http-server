@@ -62,45 +62,45 @@ $ ngrok http 8080
   - CMD users can use the `dir` command (hidden files and folders get shown using the `a`ttributes or `h`idden options).
   ```posh
   C:\Users\mixel\Desktop\ngrok_and_http-server>dir .git /a
-        Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+      Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
 
-        04/13/2018  08:19 AM    <DIR>          .
-        04/13/2018  08:19 AM    <DIR>          ..
-        04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
-        04/11/2018  03:32 PM               318 config
-        04/11/2018  03:32 PM                73 description
-        04/13/2018  08:19 AM               261 FETCH_HEAD
-        04/11/2018  03:32 PM                23 HEAD
-        04/11/2018  03:32 PM    <DIR>          hooks
-        04/13/2018  08:19 AM               297 index
-        04/11/2018  03:32 PM    <DIR>          info
-        04/11/2018  03:32 PM    <DIR>          logs
-        04/11/2018  03:52 PM    <DIR>          objects
-        04/13/2018  08:19 AM                41 ORIG_HEAD
-        04/11/2018  03:32 PM               114 packed-refs
-        04/11/2018  03:32 PM    <DIR>          refs
-                       8 File(s)          1,132 bytes
-                       7 Dir(s)  29,301,006,336 bytes free
+      04/13/2018  08:19 AM    <DIR>          .
+      04/13/2018  08:19 AM    <DIR>          ..
+      04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
+      04/11/2018  03:32 PM               318 config
+      04/11/2018  03:32 PM                73 description
+      04/13/2018  08:19 AM               261 FETCH_HEAD
+      04/11/2018  03:32 PM                23 HEAD
+      04/11/2018  03:32 PM    <DIR>          hooks
+      04/13/2018  08:19 AM               297 index
+      04/11/2018  03:32 PM    <DIR>          info
+      04/11/2018  03:32 PM    <DIR>          logs
+      04/11/2018  03:52 PM    <DIR>          objects
+      04/13/2018  08:19 AM                41 ORIG_HEAD
+      04/11/2018  03:32 PM               114 packed-refs
+      04/11/2018  03:32 PM    <DIR>          refs
+                     8 File(s)          1,132 bytes
+                     7 Dir(s)  29,301,006,336 bytes free
   ```
   - Powershell users can invoke the `Get-ChildItem` command (see hidden files and folder with the `-Force` option).
   ```posh
   PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
-        Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
-        Mode                LastWriteTime         Length Name
-        ----                -------------         ------ ----
-        d-----        4/11/2018   3:32 PM                hooks
-        d-----        4/11/2018   3:32 PM                info
-        d-----        4/11/2018   3:32 PM                logs
-        d-----        4/11/2018   3:52 PM                objects
-        d-----        4/11/2018   3:32 PM                refs
-        -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
-        -a----        4/11/2018   3:32 PM            318 config
-        -a----        4/11/2018   3:32 PM             73 description
-        -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
-        -a----        4/11/2018   3:32 PM             23 HEAD
-        -a----        4/13/2018   8:19 AM            297 index
-        -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
-        -a----        4/11/2018   3:32 PM            114 packed-refs
+      Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+      Mode                LastWriteTime         Length Name
+      ----                -------------         ------ ----
+      d-----        4/11/2018   3:32 PM                hooks
+      d-----        4/11/2018   3:32 PM                info
+      d-----        4/11/2018   3:32 PM                logs
+      d-----        4/11/2018   3:52 PM                objects
+      d-----        4/11/2018   3:32 PM                refs
+      -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
+      -a----        4/11/2018   3:32 PM            318 config
+      -a----        4/11/2018   3:32 PM             73 description
+      -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
+      -a----        4/11/2018   3:32 PM             23 HEAD
+      -a----        4/13/2018   8:19 AM            297 index
+      -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
+      -a----        4/11/2018   3:32 PM            114 packed-refs
   ```
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list until you find the very first commit message:
   ```console
@@ -112,7 +112,7 @@ $ ngrok http 8080
 
       - README.md documenting how to use ngrok and http-server to deploy
   ```
-  - Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
+  - NOTE: Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
 5. You may have also noticed that **favicon.ico** file. What's all about?
 
 <p align="right"><a href="#index">Index</a></p>
@@ -203,9 +203,9 @@ $ ngrok http 8080
       └─ wordwrap@0.0.3
       ✨  Done in 2.07s.
   ```
-  - NOTE: sorry Windows users, you don't get the icons :(
+  - NOTE: Sorry Windows users, you don't get the icons :(
 10. Look in the node_modules directory. You will see that there is a sub-folder named "http-server." You should also see folders for each of the `http-server` dependencies. These folders and the files within them represent hundreds of programmer hours to add all the functionality `http-server` offers. Wasn't that nice of them? Don't modify the folders and files within the node_modules directory, but do take a moment to examine them. There's useful information in the README files and otherwise there's a bunch of JavaScript you didn't have to write!
-  - NOTE: you could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :)
+  - NOTE: You could install http-server globally on your system, but this way we get to discuss some aspects of NodeJS you'll be working with a lot in the coming weeks :)
 ## The yarn.lock file
 11. You will also notice that you now have a file called "yarn.lock" in your project. This file allows developers to "lock" the versions of dependencies used to develop their project. This doesn't matter so much for the projects we'll work on in Lambda School, but for big projects with large teams of developers which last a long time, locking in versions is mission critical! Similarly with the files in the node_modules and .git directories, you don't want to modify the yarn.lock file, but do examine it. You will see that the dependencies for `http-server` are listed along with the version you are using, as well as any dependencies those dependencies depend upon. For example:
   ```json
@@ -244,7 +244,7 @@ $ ngrok http 8080
       -rwxr-xr-x@ 1 mixelpix  staff  16046668 Jul 15  2017 ngrok
   $ ./ngrok help
   ```
-  - NOTE: the x's on the left indicates this is an executable file. The `./` tells the console to run the binary file.
+  - NOTE: The x's on the left indicates this is an executable file. The `./` tells the console to run the binary file.
 ## Your environment, PATH and `grep`
 18. Each time you enter a command in your console, your console looks for the binary file which corresponds to the command name. Your PATH is a variable in your environment. Your enviroment contains _lots_ of variables. You can display your computer's environment variables with the `env` command. For example:
   ```console
@@ -354,7 +354,7 @@ $ env | grep "\bPATH"
 33. Your HTML page is now visible at this URL: https://202c6e30.ngrok.io/project_folder/helloWorld.html
 34. Add another header element to your HTML file and save the file.
 35. Did your web page update on the fly? How cool is that!!
-36. NOTE: if you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
+36. NOTE: If you named your HTML file, "index.html" ngrok is smart enough to know to display the file.
 37. If you change the name of your HTML to something other than "index.html," ngrok will display the directory contents - gve it a try!
 
 <p align="right"><a href="#index">Index</a></p>
