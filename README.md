@@ -38,10 +38,19 @@ $ ngrok http 8080
 1. The **README.md** file is written in "markdown" format. In particular, it is written with "[GitHub Flavored Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)" (GFM - one of many markdown flavors!) The ".md" indicates to GitHub that when displaying the page, it should be rendered according to markdown syntax rules. Compare the text in the README>md file to the display of it on GitHub. Pretty neat, huh? GitHub is also kind enough to look for files named "README.md" and display them with the GitHub repository's main page. Your text editor likely has a "Markdown Preview" (Atom) or "Open Preview" (VSC) option. The preview may differ some from what GitHub displays, but they should be in the same ballpark.
 2. The **.gitignore** file lists things which might populate your project, but which do not need to be sent up to GitHub. For example, we will be installing NodeJS modules in this project. The directory these modules live in don't need to get sent to GitHub. We use the ".gitignore" file to tell the Git repository to ignore them, i.e. to _**not**_ track these files and directories. Note that the .gitignore file lives on the "parent" level of the project and gets applied to sub-folders. As an example, the list of items in this .gitignore file has the following effect:
   ```config
-  .DS_Store        <---- now these macOS system resource files will be ignored
-  node_modules     <---- the directory and it's contents will be ignored
-  *.sw[a-p]        <---- VIM text editing resources will be ignored
+  # macOS system resource file
+  .DS_Store
+
+  # NodeJS modules directories
+  node_modules
+
+  # VIM resource files
+  *.sw[a-p]
+
+  # VSC recource files
+  .vs
   ```
+  - NOTE: you can use the octorhorpe `#` for comments.
 3. The **.git** folder contains all the resources Git uses to track file changes, e.g. maintaining the history of your commits. Don't modify these files, but do take a moment to look in there and examine the contents:
   ```console
   $ ls -al .git
