@@ -52,66 +52,73 @@ $ ngrok http 8080
   ```
   - NOTE: you can use the octorhorpe `#` for comments.
 3. The **.git** folder contains all the resources Git uses to track file changes, e.g. maintaining the history of your commits. Don't modify these files, but do take a moment to look in there and examine the contents:
-  ```console
-  $ ls -al .git
-      total 40
-      drwxr-xr-x  13 mixelpix  staff   416 Apr 11 14:14 .
-      drwxr-xr-x   7 mixelpix  staff   224 Apr 11 13:37 ..
-      -rw-r--r--   1 mixelpix  staff     5 Apr 11 14:14 COMMIT_EDITMSG
-      -rw-r--r--   1 mixelpix  staff    23 Apr 11 10:47 HEAD
-      drwxr-xr-x   2 mixelpix  staff    64 Apr 11 10:47 branches
-      -rw-r--r--@  1 mixelpix  staff   137 Apr 11 10:47 config
-      -rw-r--r--   1 mixelpix  staff    73 Apr 11 10:47 description
-      drwxr-xr-x  13 mixelpix  staff   416 Apr 11 10:47 hooks
-      -rw-r--r--   1 mixelpix  staff   536 Apr 11 14:14 index
-      drwxr-xr-x   3 mixelpix  staff    96 Apr 11 10:47 info
-      drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:49 logs
-      drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
-      drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
-  ```
-  - CMD users can use the `dir` command (hidden files and folders get shown using the `a`ttributes or `h`idden options).
-  ```posh
-  C:\Users\mixel\Desktop\ngrok_and_http-server>dir .git /a
-      Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
 
-      04/13/2018  08:19 AM    <DIR>          .
-      04/13/2018  08:19 AM    <DIR>          ..
-      04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
-      04/11/2018  03:32 PM               318 config
-      04/11/2018  03:32 PM                73 description
-      04/13/2018  08:19 AM               261 FETCH_HEAD
-      04/11/2018  03:32 PM                23 HEAD
-      04/11/2018  03:32 PM    <DIR>          hooks
-      04/13/2018  08:19 AM               297 index
-      04/11/2018  03:32 PM    <DIR>          info
-      04/11/2018  03:32 PM    <DIR>          logs
-      04/11/2018  03:52 PM    <DIR>          objects
-      04/13/2018  08:19 AM                41 ORIG_HEAD
-      04/11/2018  03:32 PM               114 packed-refs
-      04/11/2018  03:32 PM    <DIR>          refs
-                     8 File(s)          1,132 bytes
-                     7 Dir(s)  29,301,006,336 bytes free
-  ```
-  - Powershell users can invoke the `Get-ChildItem` command (see hidden files and folder with the `-Force` option).
-  ```posh
-  PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
-      Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
-      Mode                LastWriteTime         Length Name
-      ----                -------------         ------ ----
-      d-----        4/11/2018   3:32 PM                hooks
-      d-----        4/11/2018   3:32 PM                info
-      d-----        4/11/2018   3:32 PM                logs
-      d-----        4/11/2018   3:52 PM                objects
-      d-----        4/11/2018   3:32 PM                refs
-      -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
-      -a----        4/11/2018   3:32 PM            318 config
-      -a----        4/11/2018   3:32 PM             73 description
-      -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
-      -a----        4/11/2018   3:32 PM             23 HEAD
-      -a----        4/13/2018   8:19 AM            297 index
-      -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
-      -a----        4/11/2018   3:32 PM            114 packed-refs
-  ```
+<details><summary>Click here to see bash, CMD and PowerShell console outputs and commands</summary><p>
+
+- Bash user can use the `ls` command with the `-al` flags to see all files and folders in a list - including the "hidden" ones whose names start with a period.
+```console
+$ ls -al .git
+    total 40
+    drwxr-xr-x  13 mixelpix  staff   416 Apr 11 14:14 .
+    drwxr-xr-x   7 mixelpix  staff   224 Apr 11 13:37 ..
+    -rw-r--r--   1 mixelpix  staff     5 Apr 11 14:14 COMMIT_EDITMSG
+    -rw-r--r--   1 mixelpix  staff    23 Apr 11 10:47 HEAD
+    drwxr-xr-x   2 mixelpix  staff    64 Apr 11 10:47 branches
+    -rw-r--r--@  1 mixelpix  staff   137 Apr 11 10:47 config
+    -rw-r--r--   1 mixelpix  staff    73 Apr 11 10:47 description
+    drwxr-xr-x  13 mixelpix  staff   416 Apr 11 10:47 hooks
+    -rw-r--r--   1 mixelpix  staff   536 Apr 11 14:14 index
+    drwxr-xr-x   3 mixelpix  staff    96 Apr 11 10:47 info
+    drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:49 logs
+    drwxr-xr-x  66 mixelpix  staff  2112 Apr 11 14:14 objects
+    drwxr-xr-x   4 mixelpix  staff   128 Apr 11 10:47 refs
+```
+- CMD users can use the `dir` command (hidden files and folders get shown using the `a`ttributes or `h`idden options).
+```posh
+C:\Users\mixel\Desktop\ngrok_and_http-server>dir .git /a
+    Directory of C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+
+    04/13/2018  08:19 AM    <DIR>          .
+    04/13/2018  08:19 AM    <DIR>          ..
+    04/11/2018  03:52 PM                 5 COMMIT_EDITMSG
+    04/11/2018  03:32 PM               318 config
+    04/11/2018  03:32 PM                73 description
+    04/13/2018  08:19 AM               261 FETCH_HEAD
+    04/11/2018  03:32 PM                23 HEAD
+    04/11/2018  03:32 PM    <DIR>          hooks
+    04/13/2018  08:19 AM               297 index
+    04/11/2018  03:32 PM    <DIR>          info
+    04/11/2018  03:32 PM    <DIR>          logs
+    04/11/2018  03:52 PM    <DIR>          objects
+    04/13/2018  08:19 AM                41 ORIG_HEAD
+    04/11/2018  03:32 PM               114 packed-refs
+    04/11/2018  03:32 PM    <DIR>          refs
+                   8 File(s)          1,132 bytes
+                   7 Dir(s)  29,301,006,336 bytes free
+```
+- Powershell users can invoke the `Get-ChildItem` command (see hidden files and folder with the `-Force` option).
+```posh
+PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
+    Directory: C:\Users\mixel\Desktop\ngrok_and_http-server\.git
+    Mode                LastWriteTime         Length Name
+    ----                -------------         ------ ----
+    d-----        4/11/2018   3:32 PM                hooks
+    d-----        4/11/2018   3:32 PM                info
+    d-----        4/11/2018   3:32 PM                logs
+    d-----        4/11/2018   3:52 PM                objects
+    d-----        4/11/2018   3:32 PM                refs
+    -a----        4/11/2018   3:52 PM              5 COMMIT_EDITMSG
+    -a----        4/11/2018   3:32 PM            318 config
+    -a----        4/11/2018   3:32 PM             73 description
+    -a----        4/13/2018   8:19 AM            261 FETCH_HEAD
+    -a----        4/11/2018   3:32 PM             23 HEAD
+    -a----        4/13/2018   8:19 AM            297 index
+    -a----        4/13/2018   8:19 AM             41 ORIG_HEAD
+    -a----        4/11/2018   3:32 PM            114 packed-refs
+```
+
+</p></details>
+
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list until you find the very first commit message:
   ```console
   commit ad3af00d0e8ac410b5baddf99e307293bb373e33
