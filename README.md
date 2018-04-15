@@ -53,7 +53,7 @@ $ ngrok http 8080
   - NOTE: you can use the octorhorpe `#` for comments.
 3. The **.git** folder contains all the resources Git uses to track file changes, e.g. maintaining the history of your commits. Don't modify these files, but do take a moment to look in there and examine the contents:
 
-<details><summary>Click here to see bash, CMD and PowerShell console outputs and commands</summary><p>
+<details><summary>Click here to see Bash, CMD and PowerShell console outputs from the commands to view the contents of the hidden `.git` folder</summary><p>
 
 - Bash user can use the `ls` command with the `-al` flags to see all files and folders in a list - including the "hidden" ones whose names start with a period.
 ```console
