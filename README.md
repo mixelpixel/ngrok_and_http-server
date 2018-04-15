@@ -117,7 +117,7 @@ PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
     -a----        4/11/2018   3:32 PM            114 packed-refs
 ```
 
-</p></details>
+</p></details><br>
 
 4. While you are here, open a console and navigate to this project's directory. Enter the command `$ git log` and you will see all the commits I made while building this Git repository. You can press the `space bar` to page through the list until you find the very first commit message:
   ```console
