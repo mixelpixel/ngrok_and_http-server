@@ -290,7 +290,7 @@ PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
       _=/usr/bin/env
   ```
 
-19. For now, we're just interested in the directories available through your environment's "PATH." The PATH is the collection of directories your computer looks in when a command is invoked. To limit the `env` command's return and only display your PATH directories, pipe in a `grep` command. The pipe operator ()`|`) takes the results from the `env` command and "pipes" them into the `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" (but I think of it as, "Get Regular ExPressions."). Using the pipe, the `grep` command looks for lines of text which match a pattern.
+19. For now, we're just interested in the directories available through your environment's "PATH." The PATH is the collection of directories your computer looks in when a command is invoked. To limit the `env` command's return and only display your PATH directories, pipe in a `grep` command. The pipe operator `|` takes the results from the `env` command and "pipes" them into the `grep` command. The `grep` tool name is an acronym for "Global Regular Expression Print" (but I think of it as, "Get Regular ExPressions."). Using the pipe, the `grep` command looks for lines of text which match a pattern.
 20. Piping `env` into a "PATH" `grep`, you should a string of directories separated only by a colon `:`. For example, something like this:
 ### macOS and Linux users
 ```console
