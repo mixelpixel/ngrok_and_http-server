@@ -130,7 +130,7 @@ PS C:\Users\mixel\Desktop\ngrok_and_http-server> Get-ChildItem .git -Force
       - README.md documenting how to use ngrok and http-server to deploy
   ```
   - NOTE: Pressing the `q` key will "quit" the display of the git commit history log and return you to your console.
-5. You may have also noticed that **favicon.ico** file. What's all about?
+5. You may have also noticed that **favicon.ico** file. What's that all about?
 
 <p align="right"><a href="#index">Index</a></p>
 
