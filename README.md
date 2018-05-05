@@ -305,6 +305,7 @@ $ env | grep "\bPATH"
 ```
 21. The left to right order is the order your computer searches by. As soon as it finds a match, the binary file is executed (and given any additional arguments you entered with the command).
 22. Copy or move the "ngrok" binary file to one of the directories in your PATH.
+   - NOTE: For CMD and PowerShell users: https://www.nextofwindows.com/windows-quick-tip-how-to-find-out-all-my-environment-variables#Through_Command_Prompt_window
 ### macOS, Linux and GitBash users can now verify the installation of the ngrok progam and it's availability through their PATH:
 23. Like so:
   ```console
