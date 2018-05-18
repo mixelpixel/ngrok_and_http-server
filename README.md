@@ -1,6 +1,6 @@
 # Show the world your work!
 ## Overview
-This document goes into detail about how to set up your computer and use the tools you have to deploy an HTML file to the world wide web. In short, the commands are "simple." You'll serve up your webpage on your computer's "localhost" with a tool that was included when you installed NodeJS: [`npx`](https://github.com/zkat/npx). We'll also set up a NodeJS project and use the [http-server](https://www.npmjs.com/package/http-server) module. The port number used with the localhost gets fed to a tool we'll set up as a command in your console: [ngrok](https://ngrok.com). Once your system is configured, it takes two commands:
+This document goes into detail about how to set up your computer and use the tools you have to deploy an HTML file to the world wide web. In short, the commands are "simple." You'll serve up your webpage on your computer's "localhost" with a tool that was included when you installed NodeJS: [`npx`](https://github.com/zkat/npx). We'll also set up a [NodeJS](https://nodejs.org/en/) project and use the [http-server](https://www.npmjs.com/package/http-server) module. The port number used with the localhost gets fed to a tool we'll set up as a command in your console: [ngrok](https://ngrok.com). Once your system is configured, it takes two commands:
 ```console
 $ npx http-server
 ```
@@ -22,7 +22,7 @@ $ ngrok http 8080
 * Git ignore file
 * GitHub Flavored Markdown
 * HTML
-* NodeJS
+* NodeJS (I recommend installing the "LTS" version - Long Term Support)
 * Initializing NodeJS projects with Yarn
 * Adding NodeJS modules with `yarn add`
 * Dependency management with a "package.json" file
