@@ -378,6 +378,23 @@ $ env | grep "\bPATH"
 <p align="right"><a href="#index">Index</a></p>
 
 # Other Deployment Options
+## React apps
+If you `yarn start` a React app, you can use Ngrok to deploy the web app with the port number being used by `yarn start`, e.g.
+```console
+Compiled successfully!
+
+You can now view lambdanotes in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.6:3000/
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+```
+
+If you have Ngrok installed, deployment could be as simple as `ngrok http 3000` :slightly_smiling_face:
+
+## Additional Deployment options
 - Netlify: https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 - GitHub Pages: https://pages.github.com/
   - GH: https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/
